@@ -11,7 +11,7 @@ const MyAuctions = () => {
 
   useEffect(() => {
     const fetchAuctions = async () => {
-      const res = await axios.get(`/api/auction/myauctions/${email}`);
+      const res = await axios.get(`https://jobportal-6057.onrender.com/api/auction/myauctions/${email}`);
       setAuctions(res.data);
     };
     fetchAuctions();

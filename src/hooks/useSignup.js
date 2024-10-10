@@ -10,7 +10,7 @@ export const useSignup = () => {
     setLoading(true);
     setError(null);
 
-    const response = await fetch("/api/user/signup", {
+    const response = await fetch("https://jobportal-6057.onrender.com/api/user/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

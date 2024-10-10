@@ -14,7 +14,7 @@ const IndividualAuction = () => {
 
   useEffect(() => {
     const fetchAuction = async () => {
-      const res = await axios.get(`/api/auction/${id}`);
+      const res = await axios.get(`https://jobportal-6057.onrender.com/api/auction/${id}`);
       setAuction(res.data);
     };
     fetchAuction();
@@ -104,7 +104,7 @@ const IndividualAuction = () => {
       bidAmount: bidAmount,
       email: user.email,
     };
-    const res = await axios.patch(`/api/auction/bid/${id}/`, bid);
+    const res = await axios.patch(`https://jobportal-6057.onrender.com/api/auction/bid/${id}/`, bid);
     setAuction(res.data);
 
     console.log("bid submitted");
@@ -113,7 +113,7 @@ const IndividualAuction = () => {
   const handleAccept = async (e) => {
     // handle bid acceptance
     const bidId = e.target.value;
-    const res = await axios.patch(`/api/auction/accept/${id}/${bidId}`);
+    const res = await axios.patch(`https://jobportal-6057.onrender.com/api/auction/accept/${id}/${bidId}`);
     setAuction(res.data);
     console.log("bid accepted");
     console.log(e.target.value);
@@ -121,7 +121,7 @@ const IndividualAuction = () => {
 
   const handleClose = async () => {
     // handle auction closure
-    const res = await axios.patch(`/api/auction/close/${id}`);
+    const res = await axios.patch(`https://jobportal-6057.onrender.com/api/auction/close/${id}`);
     setAuction(res.data);
     console.log("auction closed");
   };

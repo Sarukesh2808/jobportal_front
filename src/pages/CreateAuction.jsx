@@ -13,7 +13,7 @@ const CreateAuction = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auction/", {
+      const res = await axios.post("https://jobportal-6057.onrender.com/api/auction/", {
         jobTitle,
         jobDescription,
         jobLocation,
