@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   
+=======
+ "proxy": "https://jobportal-6057.onrender.com/",
+>>>>>>> 240fc8527ec758e412fd30fb378de7bc77d5844a
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
